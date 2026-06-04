@@ -3,88 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nutrición - RecoverPro</title>
+    <title>Nutrición para Recuperación - RecoverPro</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&family=Nunito:wght@400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="legal-banner">
-        ⚠️ Esta plataforma es informativa. No sustituye la consulta con un profesional médico o fisioterapeuta.
-    </div>
-
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <span class="logo-icon">💪</span>
-                <span class="logo-text">RecoverPro</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="lesiones.html">Lesiones</a></li>
-                <li><a href="protocolos.html">Protocolos</a></li>
-                <li><a href="nutricion.html" class="active">Nutrición</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">RecoverPro</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="lesiones.html">Lesiones</a></li>
+                    <li><a href="protocolos.html">Protocolos</a></li>
+                    <li><a href="nutricion.html">Nutrición</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <section style="padding: 60px 20px; max-width: 1200px; margin: 0 auto;">
-        <div class="section-title">Nutrición para Recuperación</div>
+    <section style="padding: var(--spacing-2xl) 0; background-color: var(--bg-surface);">
+        <div class="container">
+            <h1 style="text-align: center; color: var(--dark-blue);">Nutrición para Recuperación Deportiva</h1>
+        </div>
+    </section>
 
-        <div style="background: var(--color-surface); padding: 40px; border-radius: 16px; margin-bottom: 40px;">
-            <h2 style="font-family: var(--font-title); font-size: 24px; margin-bottom: 20px;">Nutrientes Antiinflamatorios</h2>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-                <div style="background: var(--color-white); padding: 20px; border-radius: 12px; border-left: 4px solid var(--color-electric);">
-                    <h3 style="margin-top: 0;">🐟 Omega-3</h3>
-                    <p style="font-size: 14px; color: var(--color-text-light);">Reduce inflamación sistémica</p>
-                    <p style="font-size: 13px;">Salmón, sardinas, linaza, nueces</p>
-                </div>
-                <div style="background: var(--color-white); padding: 20px; border-radius: 12px; border-left: 4px solid var(--color-recovery);">
-                    <h3 style="margin-top: 0;">🥦 Antioxidantes</h3>
-                    <p style="font-size: 14px; color: var(--color-text-light);">Combaten estrés oxidativo</p>
-                    <p style="font-size: 13px;">Brócoli, arándanos, cacao</p>
-                </div>
-                <div style="background: var(--color-white); padding: 20px; border-radius: 12px; border-left: 4px solid var(--color-alert);">
-                    <h3 style="margin-top: 0;">🍗 Proteína</h3>
-                    <p style="font-size: 14px; color: var(--color-text-light);">Reconstruye tejido muscular</p>
-                    <p style="font-size: 13px;">Pollo, huevos, tofu, legumbres</p>
+    <section style="padding: var(--spacing-xl) 0;">
+        <div class="container">
+            <!-- Nutrientes Antiinflamatorios -->
+            <div style="margin-bottom: var(--spacing-2xl);">
+                <h2 style="color: var(--dark-blue); margin-bottom: var(--spacing-lg);">Nutrientes Antiinflamatorios</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg);">
+                    <div class="card">
+                        <h3 style="margin-top: 0; color: var(--dark-blue);">🐟 Omega-3</h3>
+                        <p style="color: var(--text-secondary);"><strong>Reduce inflamación sistémica</strong></p>
+                        <p style="font-size: 0.95rem; color: var(--text-secondary);">Salmón, sardinas, linaza, nueces, semillas de chía</p>
+                        <div class="badge badge-info">Antiinflamatorio</div>
+                    </div>
+                    <div class="card">
+                        <h3 style="margin-top: 0; color: var(--dark-blue);">🥦 Antioxidantes</h3>
+                        <p style="color: var(--text-secondary);"><strong>Combaten estrés oxidativo</strong></p>
+                        <p style="font-size: 0.95rem; color: var(--text-secondary);">Brócoli, arándanos, cacao, té verde, cúrcuma</p>
+                        <div class="badge badge-info">Detox</div>
+                    </div>
+                    <div class="card">
+                        <h3 style="margin-top: 0; color: var(--dark-blue);">🍗 Proteína</h3>
+                        <p style="color: var(--text-secondary);"><strong>Reconstruye tejido muscular</strong></p>
+                        <p style="font-size: 0.95rem; color: var(--text-secondary);">Pollo, huevos, tofu, legumbres, yogur griego</p>
+                        <div class="badge badge-success">Recuperación</div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div style="background: var(--color-surface); padding: 40px; border-radius: 16px;">
-            <h2 style="font-family: var(--font-title); font-size: 24px; margin-bottom: 20px;">Timing Nutricional</h2>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-                <div style="background: var(--color-white); padding: 20px; border-radius: 12px;">
-                    <p style="font-weight: 700; margin-bottom: 10px;">ANTES DEL ENTRENAMIENTO</p>
-                    <p style="font-size: 13px;">Carbohidratos + proteína 2h antes</p>
+            <!-- Timing Nutricional -->
+            <div style="margin-bottom: var(--spacing-2xl);">
+                <h2 style="color: var(--dark-blue); margin-bottom: var(--spacing-lg);">Timing Nutricional: Cuándo Comer</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-lg);">
+                    <div class="card" style="border-left: 4px solid var(--electric-blue);">
+                        <h3 style="margin-top: 0; color: var(--dark-blue);">⏰ ANTES DEL ENTRENAMIENTO</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md);"><strong>2-3 horas antes:</strong></p>
+                        <ul style="padding-left: var(--spacing-lg); color: var(--text-secondary);
+">
+                            <li>Carbohidratos complejos (arroz, pasta integral)</li>
+                            <li>Proteína magra (pechuga de pollo)</li>
+                            <li>Grasas moderadas</li>
+                        </ul>
+                    </div>
+                    <div class="card" style="border-left: 4px solid var(--recovery-green);">
+                        <h3 style="margin-top: 0; color: var(--dark-blue);">💧 DURANTE EL ENTRENAMIENTO</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md);"><strong>Para ejercicios > 90 minutos:</strong></p>
+                        <ul style="padding-left: var(--spacing-lg); color: var(--text-secondary);">
+                            <li>Agua constantemente</li>
+                            <li>Bebida isotónica con electrolitos</li>
+                            <li>Carbohidratos simples si es muy intenso</li>
+                        </ul>
+                    </div>
+                    <div class="card" style="border-left: 4px solid var(--alert-red);">
+                        <h3 style="margin-top: 0; color: var(--dark-blue);">🍽️ DESPUÉS DEL ENTRENAMIENTO</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md);"><strong>30-60 minutos post-entreno:</strong></p>
+                        <ul style="padding-left: var(--spacing-lg); color: var(--text-secondary);">
+                            <li>Proteína (whey, pollo, huevos)</li>
+                            <li>Carbohidratos para reponer glucógeno</li>
+                            <li>Fluidos para rehidratación</li>
+                        </ul>
+                    </div>
                 </div>
-                <div style="background: var(--color-white); padding: 20px; border-radius: 12px;">
-                    <p style="font-weight: 700; margin-bottom: 10px;">DURANTE</p>
-                    <p style="font-size: 13px;">Agua + electrolitos (>90min)</p>
-                </div>
-                <div style="background: var(--color-white); padding: 20px; border-radius: 12px;">
-                    <p style="font-weight: 700; margin-bottom: 10px;">DESPUÉS</p>
-                    <p style="font-size: 13px;">Proteína + carbos en 30-60 min</p>
+            </div>
+
+            <!-- Recetas de Recuperación -->
+            <div>
+                <h2 style="color: var(--dark-blue); margin-bottom: var(--spacing-lg);">🥤 Smoothies de Recuperación</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg);">
+                    <div class="card">
+                        <h3 style="margin-top: 0; color: var(--dark-blue);">Smoothie Antiinflamatorio</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);"><strong>Ingredientes:</strong></p>
+                        <ul style="padding-left: var(--spacing-lg); font-size: 0.9rem; color: var(--text-secondary);">
+                            <li>1 plátano</li>
+                            <li>100g arándanos</li>
+                            <li>1 cucharada cacao</li>
+                            <li>1 cucharada linaza</li>
+                            <li>200ml leche almendra</li>
+                        </ul>
+                        <div class="badge badge-info" style="margin-top: var(--spacing-md);">Pre/Post Entreno</div>
+                    </div>
+                    <div class="card">
+                        <h3 style="margin-top: 0; color: var(--dark-blue);">Smoothie Proteína + Omega</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);"><strong>Ingredientes:</strong></p>
+                        <ul style="padding-left: var(--spacing-lg); font-size: 0.9rem; color: var(--text-secondary);">
+                            <li>Whey protein (30g)</li>
+                            <li>1 cucharada manteca cacahuete</li>
+                            <li>1 manzana</li>
+                            <li>1 cucharada semillas chía</li>
+                            <li>200ml agua</li>
+                        </ul>
+                        <div class="badge badge-success" style="margin-top: var(--spacing-md);">Recuperación</div>
+                    </div>
+                    <div class="card">
+                        <h3 style="margin-top: 0; color: var(--dark-blue);">Smoothie Desintoxicante</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);"><strong>Ingredientes:</strong></p>
+                        <ul style="padding-left: var(--spacing-lg); font-size: 0.9rem; color: var(--text-secondary);">
+                            <li>1 taza espinaca</li>
+                            <li>½ aguacate</li>
+                            <li>Zumo limón fresco</li>
+                            <li>1 cucharada cúrcuma</li>
+                            <li>200ml agua coco</li>
+                        </ul>
+                        <div class="badge badge-warning" style="margin-top: var(--spacing-md);">Antioxidante</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>RecoverPro</h4>
-                <p>Recuperación deportiva basada en evidencia científica</p>
+    <div class="legal-disclaimer" style="margin: var(--spacing-xl) auto; max-width: 900px; text-align: center;">
+        <strong>ℹ️ Nota Importante:</strong> Estas recomendaciones son generales. Para dietas personalizadas según tu lesión o condición, consulta con un nutricionista deportivo.
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>RecoverPro</h4>
+                    <p>Recuperación deportiva basada en evidencia científica.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Navegación</h4>
+                    <a href="index.html">Inicio</a>
+                    <a href="lesiones.html">Lesiones</a>
+                    <a href="protocolos.html">Protocolos</a>
+                    <a href="nutricion.html">Nutrición</a>
+                    <a href="blog.html">Blog</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <a href="#">Aviso Legal</a>
+                    <a href="#">Privacidad</a>
+                </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 RecoverPro.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RecoverPro. No sustituye el consejo médico profesional.</p>
+            </div>
         </div>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

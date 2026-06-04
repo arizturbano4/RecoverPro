@@ -5,68 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - RecoverPro</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&family=Nunito:wght@400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="legal-banner">
-        ⚠️ Esta plataforma es informativa. No sustituye la consulta con un profesional médico o fisioterapeuta.
-    </div>
-
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <span class="logo-icon">💪</span>
-                <span class="logo-text">RecoverPro</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="lesiones.html">Lesiones</a></li>
-                <li><a href="protocolos.html">Protocolos</a></li>
-                <li><a href="nutricion.html">Nutrición</a></li>
-                <li><a href="blog.html" class="active">Blog</a></li>
-            </ul>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">RecoverPro</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="lesiones.html">Lesiones</a></li>
+                    <li><a href="protocolos.html">Protocolos</a></li>
+                    <li><a href="nutricion.html">Nutrición</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <section style="padding: 60px 20px; max-width: 1200px; margin: 0 auto;">
-        <div class="section-title">Blog - Artículos Científicos</div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-            <article style="background: var(--color-surface); padding: 30px; border-radius: 16px; border-top: 4px solid var(--color-electric);">
-                <div style="display: inline-block; background: var(--color-electric); color: white; padding: 5px 10px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 15px;">📚 Basado en Evidencia</div>
-                <h2 style="font-family: var(--font-title); font-size: 20px; margin: 0 0 12px 0;">Crioterapia vs Calor</h2>
-                <p style="color: var(--color-text-light); margin: 0 0 15px 0;">Cuándo usar cada uno según tu lesión</p>
-                <p style="font-size: 14px; line-height: 1.6;">El hielo reduce inflamación aguda (primeras 72h) mientras que el calor mejora la circulación en lesiones crónicas...</p>
-            </article>
-
-            <article style="background: var(--color-surface); padding: 30px; border-radius: 16px; border-top: 4px solid var(--color-recovery);">
-                <div style="display: inline-block; background: var(--color-recovery); color: white; padding: 5px 10px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 15px;">📚 Basado en Evidencia</div>
-                <h2 style="font-family: var(--font-title); font-size: 20px; margin: 0 0 12px 0;">El Sueño en la Recuperación</h2>
-                <p style="color: var(--color-text-light); margin: 0 0 15px 0;">Cómo optimizar el descanso para acelerar recuperación</p>
-                <p style="font-size: 14px; line-height: 1.6;">Durante el sueño profundo se produce la mayor síntesis de proteína muscular. Descubre estrategias para mejorar...</p>
-            </article>
-
-            <article style="background: var(--color-surface); padding: 30px; border-radius: 16px; border-top: 4px solid var(--color-alert);">
-                <div style="display: inline-block; background: var(--color-alert); color: white; padding: 5px 10px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 15px;">📚 Basado en Evidencia</div>
-                <h2 style="font-family: var(--font-title); font-size: 20px; margin: 0 0 12px 0;">Foam Roller: Guía Definitiva</h2>
-                <p style="color: var(--color-text-light); margin: 0 0 15px 0;">Técnicas correctas de auto-masaje por zona muscular</p>
-                <p style="font-size: 14px; line-height: 1.6;">El foam rolling reduce tensión miofascial. Aprende la técnica correcta y evita errores comunes...</p>
-            </article>
+    <section style="padding: var(--spacing-2xl) 0; background-color: var(--bg-surface);">
+        <div class="container">
+            <h1 style="text-align: center; color: var(--dark-blue);">Blog - Artículos Científicos</h1>
+            <p style="text-align: center; color: var(--text-secondary);">Basados en evidencia científica y mejores prácticas</p>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>RecoverPro</h4>
-                <p>Recuperación deportiva basada en evidencia científica</p>
+    <section style="padding: var(--spacing-xl) 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg);">
+                <!-- Artículo 1 -->
+                <article class="card">
+                    <div style="margin-bottom: var(--spacing-md);">
+                        <span class="badge badge-info">Basado en Evidencia ✓</span>
+                    </div>
+                    <h2 style="font-size: 1.5rem; color: var(--dark-blue); margin: 0 0 var(--spacing-md) 0;">Crioterapia vs Calor: Cuándo Usar Cada Uno</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md);"><strong>Por el equipo médico de RecoverPro</strong> • 5 min de lectura</p>
+                    <p style="color: var(--text-secondary); line-height: 1.8;">El hielo reduce inflamación aguda en las primeras 72 horas post-lesión, mientras que el calor mejora la circulación en lesiones crónicas y contracturas. Aprende la ciencia detrás de cada técnica...</p>
+                    <a href="#" class="btn btn-secondary btn-sm" style="margin-top: var(--spacing-lg);">Leer Artículo →</a>
+                </article>
+
+                <!-- Artículo 2 -->
+                <article class="card">
+                    <div style="margin-bottom: var(--spacing-md);">
+                        <span class="badge badge-success">Basado en Evidencia ✓</span>
+                    </div>
+                    <h2 style="font-size: 1.5rem; color: var(--dark-blue); margin: 0 0 var(--spacing-md) 0;">El Sueño como Herramienta de Recuperación</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md);"><strong>Por el equipo médico de RecoverPro</strong> • 7 min de lectura</p>
+                    <p style="color: var(--text-secondary); line-height: 1.8;">Durante el sueño profundo se produce la mayor síntesis de proteína muscular. Descubre estrategias científicamente probadas para mejorar la calidad del sueño y acelerar tu recuperación...</p>
+                    <a href="#" class="btn btn-secondary btn-sm" style="margin-top: var(--spacing-lg);">Leer Artículo →</a>
+                </article>
+
+                <!-- Artículo 3 -->
+                <article class="card">
+                    <div style="margin-bottom: var(--spacing-md);">
+                        <span class="badge badge-warning">Basado en Evidencia ✓</span>
+                    </div>
+                    <h2 style="font-size: 1.5rem; color: var(--dark-blue); margin: 0 0 var(--spacing-md) 0;">Foam Roller: La Guía Definitiva</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md);"><strong>Por el equipo médico de RecoverPro</strong> • 8 min de lectura</p>
+                    <p style="color: var(--text-secondary); line-height: 1.8;">El foam rolling reduce la tensión miofascial y mejora la movilidad. Aprende la técnica correcta para cada grupo muscular y evita los errores comunes que pueden empeorar las lesiones...</p>
+                    <a href="#" class="btn btn-secondary btn-sm" style="margin-top: var(--spacing-lg);">Leer Artículo →</a>
+                </article>
+
+                <!-- Artículo 4 -->
+                <article class="card">
+                    <div style="margin-bottom: var(--spacing-md);">
+                        <span class="badge badge-success">Basado en Evidencia ✓</span>
+                    </div>
+                    <h2 style="font-size: 1.5rem; color: var(--dark-blue); margin: 0 0 var(--spacing-md) 0;">Vuelta al Deporte Tras Lesión: Protocolo de Fisios</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md);"><strong>Por el equipo médico de RecoverPro</strong> • 6 min de lectura</p>
+                    <p style="color: var(--text-secondary); line-height: 1.8;">Volver al deporte demasiado pronto es la causa #1 de recaídas. Descubre el protocolo profesional paso a paso para una reintegración segura y progresiva...</p>
+                    <a href="#" class="btn btn-secondary btn-sm" style="margin-top: var(--spacing-lg);">Leer Artículo →</a>
+                </article>
+
+                <!-- Artículo 5 -->
+                <article class="card">
+                    <div style="margin-bottom: var(--spacing-md);">
+                        <span class="badge badge-danger">Basado en Evidencia ✓</span>
+                    </div>
+                    <h2 style="font-size: 1.5rem; color: var(--dark-blue); margin: 0 0 var(--spacing-md) 0;">Overtraining: Señales, Causas y Cómo Salir de Él</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md);"><strong>Por el equipo médico de RecoverPro</strong> • 8 min de lectura</p>
+                    <p style="color: var(--text-secondary); line-height: 1.8;">El síndrome de overtraining es común en deportistas dedicados. Conoce los síntomas de alerta y las estrategias de recuperación basadas en investigación científica...</p>
+                    <a href="#" class="btn btn-secondary btn-sm" style="margin-top: var(--spacing-lg);">Leer Artículo →</a>
+                </article>
+
+                <!-- Artículo 6 -->
+                <article class="card">
+                    <div style="margin-bottom: var(--spacing-md);">
+                        <span class="badge badge-info">Basado en Evidencia ✓</span>
+                    </div>
+                    <h2 style="font-size: 1.5rem; color: var(--dark-blue); margin: 0 0 var(--spacing-md) 0;">Suplementación Deportiva: Qué Funciona vs Marketing</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md);"><strong>Por el equipo médico de RecoverPro</strong> • 9 min de lectura</p>
+                    <p style="color: var(--text-secondary); line-height: 1.8;">No todos los suplementos son iguales. Descubre cuáles tienen evidencia científica sólida y cuáles son puro marketing para acelerar tu recuperación de forma inteligente...</p>
+                    <a href="#" class="btn btn-secondary btn-sm" style="margin-top: var(--spacing-lg);">Leer Artículo →</a>
+                </article>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 RecoverPro.</p>
+    </section>
+
+    <div class="legal-disclaimer" style="margin: var(--spacing-xl) auto; max-width: 900px; text-align: center;">
+        <strong>📖 Fuentes:</strong> Todos los artículos están basados en estudios revisados por pares y publicaciones científicas de prestigio en medicina deportiva.
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>RecoverPro</h4>
+                    <p>Recuperación deportiva basada en evidencia científica.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Navegación</h4>
+                    <a href="index.html">Inicio</a>
+                    <a href="lesiones.html">Lesiones</a>
+                    <a href="protocolos.html">Protocolos</a>
+                    <a href="nutricion.html">Nutrición</a>
+                    <a href="blog.html">Blog</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <a href="#">Aviso Legal</a>
+                    <a href="#">Privacidad</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RecoverPro. No sustituye el consejo médico profesional.</p>
+            </div>
         </div>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
