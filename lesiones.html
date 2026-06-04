@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de Datos de Lesiones - RecoverPro</title>
+    <meta name="description" content="Enciclopedia completa de lesiones deportivas con síntomas, causas, tiempo de recuperación.">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&family=Nunito:wght@400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="legal-banner">
+        ⚠️ Esta plataforma es informativa. No sustituye la consulta con un profesional médico o fisioterapeuta.
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">💪</span>
+                <span class="logo-text">RecoverPro</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="lesiones.html" class="active">Lesiones</a></li>
+                <li><a href="protocolos.html">Protocolos</a></li>
+                <li><a href="nutricion.html">Nutrición</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section style="padding: 60px 20px; max-width: 1200px; margin: 0 auto;">
+        <div class="section-title">Enciclopedia de Lesiones Deportivas</div>
+        <p class="section-subtitle">Selecciona una zona del cuerpo para explorar todas las lesiones</p>
+
+        <div style="background: var(--color-surface); padding: 30px; border-radius: 12px; margin-bottom: 40px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                <div>
+                    <label style="display: block; font-weight: 600; margin-bottom: 8px;">Zona Corporal:</label>
+                    <select id="filter-zone" style="width: 100%; padding: 10px; border: 2px solid #DDD; border-radius: 8px; font-family: var(--font-body);">
+                        <option value="">Todas las zonas</option>
+                        <option value="cabeza">Cabeza</option>
+                        <option value="hombro">Hombro</option>
+                        <option value="espalda">Espalda</option>
+                        <option value="rodilla">Rodilla</option>
+                        <option value="tobillo">Tobillo</option>
+                    </select>
+                </div>
+                <div>
+                    <label style="display: block; font-weight: 600; margin-bottom: 8px;">Severidad:</label>
+                    <select id="filter-severity" style="width: 100%; padding: 10px; border: 2px solid #DDD; border-radius: 8px; font-family: var(--font-body);">
+                        <option value="">Todas</option>
+                        <option value="leve">Leve</option>
+                        <option value="moderada">Moderada</option>
+                        <option value="grave">Grave</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div id="injuries-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px;"></div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>RecoverPro</h4>
+                <p>Recuperación deportiva basada en evidencia científica</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 RecoverPro. No sustituye el consejo médico profesional.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        function loadAllInjuries() {
+            let allInjuries = [];
+            for (let zone in injuriesDatabase) {
+                injuriesDatabase[zone].forEach(injury => {
+                    allInjuries.push({ ...injury, zone: zone });
+                });
+            }
+            displayFilteredInjuries(allInjuries);
+        }
+
+        function displayFilteredInjuries(injuriesList) {
+            const container = document.getElementById('injuries-list');
+            const zoneFilter = document.getElementById('filter-zone').value;
+            const severityFilter = document.getElementById('filter-severity').value;
+            
+            let filtered = injuriesList.filter(injury => {
+                const zoneMatch = !zoneFilter || injury.zone === zoneFilter;
+                const severityMatch = !severityFilter || injury.severity === severityFilter;
+                return zoneMatch && severityMatch;
+            });
+            
+            container.innerHTML = '';
+            filtered.forEach(injury => {
+                const card = document.createElement('div');
+                card.style.cssText = `background: var(--color-surface); padding: 25px; border-radius: 12px; border-left: 4px solid var(--color-electric); transition: var(--transition);`;
+                card.innerHTML = `
+                    <h3 style="font-family: var(--font-title); font-size: 18px; color: var(--color-midnight); margin: 0 0 4px 0;">${injury.name}</h3>
+                    <p style="font-size: 13px; color: var(--color-text-light); margin: 0; font-style: italic;\"${injury.common}\"</p>
+                    <span class="injury-severity severity-${injury.severity}">${injury.severity.toUpperCase()}</span>
+                    <p style="font-size: 13px; margin: 12px 0;"><strong>Síntomas:</strong> ${injury.symptoms}</p>
+                    <p style="font-size: 13px; margin: 12px 0; color: var(--color-alert); font-weight: 600;">⚠️ ${injury.warning}</p>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        document.getElementById('filter-zone').addEventListener('change', function() {
+            let allInjuries = [];
+            for (let zone in injuriesDatabase) {
+                injuriesDatabase[zone].forEach(injury => {
+                    allInjuries.push({ ...injury, zone: zone });
+                });
+            }
+            displayFilteredInjuries(allInjuries);
+        });
+
+        document.getElementById('filter-severity').addEventListener('change', function() {
+            let allInjuries = [];
+            for (let zone in injuriesDatabase) {
+                injuriesDatabase[zone].forEach(injury => {
+                    allInjuries.push({ ...injury, zone: zone });
+                });
+            }
+            displayFilteredInjuries(allInjuries);
+        });
+
+        loadAllInjuries();
+    </script>
+</body>
+</html>

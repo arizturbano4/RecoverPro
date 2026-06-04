@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecoverPro - Recuperación Deportiva Premium</title>
+    <meta name="description" content="Plataforma de recuperación deportiva, prevención de lesiones y bienestar activo para deportistas españoles.">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&family=Nunito:wght@400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="legal-banner">
+        ⚠️ Esta plataforma es informativa. No sustituye la consulta con un profesional médico o fisioterapeuta.
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">💪</span>
+                <span class="logo-text">RecoverPro</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="lesiones.html">Lesiones</a></li>
+                <li><a href="protocolos.html">Protocolos</a></li>
+                <li><a href="nutricion.html">Nutrición</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-gradient"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Recupera más rápido.<br>Rinde mejor.</h1>
+            <div class="hero-stat">
+                <div class="stat-number" data-target="67">0</div>
+                <div class="stat-text">% de lesiones deportivas son prevenibles</div>
+            </div>
+            <div class="hero-ctas">
+                <a href="lesiones.html" class="btn btn-primary">Explorar Lesiones</a>
+                <a href="protocolos.html" class="btn btn-secondary">Ver Protocolos</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="pillars">
+        <div class="section-title">Los 4 Pilares de RecoverPro</div>
+        <div class="pillars-grid">
+            <div class="pillar-card">
+                <div class="pillar-icon">🏥</div>
+                <h3>Recuperación</h3>
+                <p>Protocolos científicos personalizados para cada lesión</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon">🛡️</div>
+                <h3>Prevención</h3>
+                <p>Ejercicios preventivos basados en tu deporte</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon">🥗</div>
+                <h3>Nutrición</h3>
+                <p>Estrategias nutricionales anti-inflamatorias</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon">😴</div>
+                <h3>Descanso</h3>
+                <p>Optimización del sueño para la recuperación máxima</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="calculator">
+        <div class="section-title">¿Cuánto tardas en recuperarte?</div>
+        <p class="section-subtitle">Calcula tu tiempo de recuperación personalizado</p>
+        <div class="calculator-container">
+            <div class="calc-inputs">
+                <div class="calc-group">
+                    <label for="injury-type">Tipo de Lesión:</label>
+                    <select id="injury-type">
+                        <option value="">Selecciona...</option>
+                        <option value="agujetas">Agujetas</option>
+                        <option value="esguince-tobillo">Esguince de Tobillo</option>
+                        <option value="rodilla-corredor">Rodilla del Corredor</option>
+                        <option value="contractura-lumbar">Contractura Lumbar</option>
+                        <option value="tendinitis-hombro">Tendinitis de Hombro</option>
+                        <option value="fascitis-plantar">Fascitis Plantar</option>
+                    </select>
+                </div>
+                <div class="calc-group">
+                    <label for="severity">Severidad (1-5):</label>
+                    <input type="range" id="severity" min="1" max="5" value="3">
+                    <span id="severity-label">3 - Moderada</span>
+                </div>
+                <div class="calc-group">
+                    <label for="age">Edad:</label>
+                    <input type="number" id="age" min="16" max="80" value="30">
+                </div>
+                <div class="calc-group">
+                    <label for="level">Nivel Deportivo:</label>
+                    <select id="level">
+                        <option value="amateur">Amateur</option>
+                        <option value="semipro">Semiprofesional</option>
+                        <option value="pro">Profesional</option>
+                    </select>
+                </div>
+                <div class="calc-group">
+                    <label for="weeks">Semanas con la Lesión:</label>
+                    <input type="number" id="weeks" min="0" max="52" value="1">
+                </div>
+                <button class="btn btn-primary" onclick="calculateRecovery()">Calcular</button>
+            </div>
+            <div id="calc-result" class="calc-result hidden">
+                <div class="result-card">
+                    <div class="result-time">
+                        <span class="result-label">Tiempo Estimado:</span>
+                        <span id="result-weeks" class="result-value">-</span>
+                    </div>
+                    <div class="result-protocol">
+                        <span class="result-label">Protocolo Recomendado:</span>
+                        <span id="result-protocol" class="result-value">-</span>
+                    </div>
+                    <div class="result-alerts">
+                        <span class="result-label">⚠️ Señales de Alerta:</span>
+                        <ul id="result-alerts-list"></ul>
+                    </div>
+                    <div class="result-doctor">
+                        <span class="result-label">🏥 Cuándo Consultar Médico:</span>
+                        <p id="result-doctor-text">-</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Recibe tu Protocolo de Recuperación Semanal</h2>
+            <p>Consejos, ejercicios y estrategias nutricionales directamente en tu email</p>
+            <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                <input type="email" placeholder="tu@email.com" required>
+                <button type="submit" class="btn btn-primary">Suscribirse</button>
+            </form>
+            <p class="newsletter-privacy">Respetamos tu privacidad. Nada de SPAM.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>RecoverPro</h4>
+                <p>Recuperación deportiva basada en evidencia científica</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="lesiones.html">Lesiones</a></li>
+                    <li><a href="protocolos.html">Protocolos</a></li>
+                    <li><a href="nutricion.html">Nutrición</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#aviso">Aviso Legal</a></li>
+                    <li><a href="#privacidad">Privacidad</a></li>
+                    <li><a href="#terminos">Términos</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 RecoverPro. No sustituye el consejo médico profesional.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
